@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="CSS/Header.css">
+  <link rel="stylesheet" type="text/css" href="CSS/image-scroller.css">
+<link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="header sticky">
+          <a href="#default" class="header">ADRIAN LAMOUR - PORTFOLIO</a>
+          <div class="header-right">
+            <a class="active" href="#home">Intro</a> 
+            <a href="gallery.html">Gallery</a>   
+            <a href="interactive.html">Interactive</a>      
+          </div>
+        </div>   
+      </header>   
+
+
+  <div id="videospacer">
+  Hello World!
+      <video autoplay muted loop id="myVideo" >
+        <source src="media/animation/AdrianLamour-Showreel1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="bg-text" id="bg-textid">
+        3D EXPERIENCE
+        <hr>
+        <h3 style="font-size: 80%; padding:0px; margin:0px;">IMMERSIVE DESIGN</h3>
+        <!-- <h3 style="font-size: 4.4vw; padding:0px; margin:0px;">JOURNEY</h3> -->
+        
+    </div>
+  </div>
+
+
+
+  
+  
+ 
+
+<!-- <br>
+<br>
+<br>
+<br> -->
+
+
+<!-- <div class="bg-image img1"></div>
+<div class="bg-image img2"></div>
+<div class="bg-image img3"></div>
+<div class="bg-image img4"></div>
+<div class="bg-image img5"></div>
+<div class="bg-image img6"></div> -->
+
+
+
+  <script>
+
+    let header = document.getElementById('myVideo');
+    let headertxt = document.getElementById('bg-textid');
+
+document.addEventListener('scroll', function() {
+    // Get scroll position
+    let scrollPosition = window.pageYOffset;
+
+    // Calculate whether the scroll it 350px or not then set the opacity to face the header out
+    if (scrollPosition <= 1800) {
+        header.style.opacity = 1;
+         header.style.opacity = 1 - scrollPosition / 1900;
+        headertxt.style.opacity = 1 - scrollPosition / 350;
+    } else {
+        header.style.opacity = 0;
+        headertxt.style.opacity = 0;
+    }
+});
+
+  </script>
+
+<div class="">
+  <img class="" style="width: 100%" src="images/gallery/01  3D Rendering - House Zero - Queenswood Pretoria.jpg" alt="3D Rendered image of Zero Energy House in Queenswood Pretoria">
+</div>
+
+
+<p class="toptext"> Welcome! I'm a results-driven 3D Illustrator, merging technical skill with creativity. Specializing in design visualization, I craft immersive experiences. Explore my diverse skills, from 3ds Max to VR development, revealing a dedication to design communication and visual storytelling.</p>
+      
+  <br>
+  <br>
+
+<div class="slideshow-parent">
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="images/homepage/1_Architectural 3D Rendering.jpg" alt="3D Architectural Rendering" class="bg" style="width:100%">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+        <img src="images/homepage/2 Residential 3D Rendering Parkwood Johannesburg.jpg" alt="3D Rendering of Residential Architectural Design" class="bg" style="width:100%">
+      <div class="text"></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images/homepage/3 Office Library - 3D Rendering - London.jpg" alt="3D Rendering of Interior Design for Office Library Lounge" class="bg" style="width:100%">
+      <div class="text"></div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  
+  <script>
+        
+        if (navigator.msMaxTouchPoints) {
+      $('#slider').addClass('ms-touch');
+    }
+        
+    var slideIndex = 1;
+    showSlides(slideIndex);
+  
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+  
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+  
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active"
+  
+    }
+  
+    var slideIndex = 0;
+    carousel();
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 8000); // Change image every 8 seconds
+    }
+  
+  </script>
+
+</div>
+  <div class="flex-container reverse">
+    <img src="images/thumbnails/11_Growmotion3D_Thumb.jpg" alt="3D Rendering of House - 100 Jan Smuts - Forest Town" style="float:right" class="column-image">
+    <div class="column-text"> 
+        <h3>3D Visualization Expertise</h3>
+        <p>Mastery in 3D visualization, two decades. Adept at conceptualizing and rendering architectural designs for diverse projects. Proficient in lighting, materials, and post-production. Extensive experience in client presentations, design consultation, and team collaboration.</p>
+    </div>
+  </div>  
+  
+   <div class="flex-container"> 
+      <img src="images/thumbnails/17_Growmotion3D_Thumb_RenderParkhurstRenovation.jpg" alt="High Quality Interior Design 3D Rendering Services" style="float:left" class="column-image">
+      <div class="column-text" > 
+          <h3>Interior Design Project Expertise</h3>
+          <p>Navigating interior design projects from concept to detailed execution. Proficient in design research, conceptualization, and crafting detailed models of furniture and custom accessories. Expertise extends to contextual lighting development and rendering tailored for diverse media platforms.</p>
+      </div>
+   </div>  
+   
+  <div class="flex-container reverse"> 
+      <img src="images/thumbnails/3D-Rendering-Wildlife-Estate-Hoedspruit-Lifestyle-Architecture.jpg" alt="High Quality 3D Rendering for Property Marketing and Sales" style="float:right" class="column-image">
+      <div class="column-text"> 
+          <h3>Property Development Insight</h3>
+          <p>
+            
+        Extensive involvement in property development projects, contributing from initial stages to the realization of dynamic visualizations. Creating compelling visuals that resonate with clients, stakeholders, and target audiences, elevating property development narratives through immersive storytelling. </p>
+      </div>
+  </div> 
+  
+  <div class="flex-container"> 
+      <img src="images/thumbnails/13_Growmotion3D_Thumb.jpg" alt="3D Rendering for Engineering, Transport and Interchange Design" style="float:left" class="column-image">
+      <div class="column-text"> 
+          <h3>Engineering, Urban Planning & Transport Design</h3>
+          <p> Experience in transport/interchange design and urban planning. From envisioning transit hubs to designing cityscapes, my skills include creating immersive visualizations that capture the essence of transformative urban spaces. Engage with me to shape the future of transportation and urban living through compelling design narratives. </p>
+      </div>
+  </div>
+  
+ 
+  
+  <div class="flex-container reverse"> 
+      <img src="images/thumbnails/12_Growmotion3D_Thumb.jpg" alt="3D Presentations and Renderings of Furniture Designs" style="float:right" class="column-image">
+      <!-- <div class="centertxt"> -->
+        <div class="column-text"> 
+            <div class="centertxt">
+                <h3>Furniture Visualization</h3>
+                <p>3D Presentations of furniture to communicate design ideas, and showcase furniture in different environments. I have experience in creating realtime furniture visualisations for VR and web.</p>
+            </div>
+        </div>
+      <!-- </div> -->
+     
+  </div>
+  
+  
+  
+
+</body>
+</html>
